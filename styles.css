@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    
+}
+
+.contenedor-principal{
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden; /*ESto sirve para ocultar lo que sobra en el contenedor*/
+    position: relative;
+    height: auto; /*Para que la altura sea dinamica segun el contenido*/
+}
+
+/*Aqui iniciamos el estilo de la barra de navagecion*/
+
+.navbar{
+    width: 100%;
+    background-color: #2C395E;
+    color: #c1e8ff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    z-index: 1000;
+}
+
+.navbar-menu{
+    list-style: none;
+    display: flex; /*Esto hace que los li esten de manera horizontal*/
+    gap: 2.5rem;
+}
+
+/*Aqui configuramos los items del menu de navegacion*/
+.navbar-link{
+    font-size: 1rem;
+    text-decoration: none;
+    color: #c1e8ff;
+    letter-spacing: 0.3rem;
+    font-weight: 300;
+    transition: color 0.3s ease;
+}
+
+/*Aqui personalizamos el menu caundo el mouse pasa por encima*/
+.navbar-link:hover{
+    color: #c1e8ff;
+    font-weight: 900;
+}
+/*Menu hamburgesa icono*/
+.navbar-icono{
+    /*display: none;*/
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #c1e8ff;
+}
+
+/*Ocultar el checkbox del diseño*/
+.menu-toggle{
+    display: none;
+}
+
+/*Fin del diseño de la barra*/
+
+/*Inicio del carrusel de imagenes*/
+
+h2{
+    position: absolute; /*si no pones esto no aparecera */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 90%;
+    max-width: 600px;
+    color: white;
+    text-align: center;
+    z-index: 2;
+}
+
+
+/*Configurar el contenedor principal del carrusel*/
+.contenedor-carrusel-imaganes{
+    display: grid;
+    grid-template-columns: repeat(3,100%);
+    animation: carrusel 10s infinite;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+
+
+.contenedor-carrusel-imaganes div{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 650px;
+    flex-shrink: 0;
+}
+
+.imagen1{
+    background-image: url(./imagenes/Carrusel/c1.jpeg);
+    position: relative;
+}
+
+.imagen2{
+    background-image: url(./imagenes/Carrusel/c2.jpeg);
+    position: relative;
+}
+
+.imagen3{
+    background-image: url(./imagenes/Carrusel/c3.jpeg);
+    position: relative;
+}
+
+/*=== Animacion del carrusel de imagenes*/
+
+@keyframes carrusel {
+    0%{ transform:translateX(0%) ;}
+    20%{ transform:translateX(0%) ;}
+    25%{ transform:translateX(-100%) ;}
+    45%{ transform:translateX(-100%) ;}
+    50%{ transform:translateX(-200%) ;}
+    70%{ transform:translateX(-200%) ;}
+    75%{ transform:translateX(-100%) ;}
+    100%{ transform:translateX(0%) ;}
+    
+}
+
+/*
+Inicio diseño card de productos 1*/
+.contenedor-principal-card{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+.contenedor-card1{
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+.contenedor-card1 .card-productos1{
+    width: 280px;
+    height: 350px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    transition: all 0.25s;
+    
+}
+
+.contenedor-card1 .card-productos1 img{
+    width: 280px;
+    height: 170px;
+    object-fit: cover; 
+    border:  3px solid #fff;
+}
+
+.contenedor-card1 .card-productos1:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.contenedor-card1 .card-productos1 h4{
+    font-weight: bold;
+    padding-top: 5px;
+}
+
+.contenedor-card1 .card-productos1 p{
+    padding: 0 1rem;
+    font-size: 1rem;
+    font-weight: 300;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+.contenedor-card1 .card-productos1 a{
+    font-weight: 500;
+    text-decoration: none;
+    color: #3498db;
+}
+/*Fin diseño card de productos1 1*/
+
+
+/*Inicio diseño card de productos 2*/
+
+.contenedor-card2{
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+
+.contenedor-card2 .card-productos2{
+    width: 280px;
+    height: 360px;
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 2px 2px 2px rgba(0,0,0,0.3);
+    transition: all 0.25s;
+}
+
+.contenedor-card2 .card-productos2 img{
+    width: 200px;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-productos2 .cuerpo-card{
+    background-color: rgba(0, 0, 0, 0.25);
+    position: relative;
+    bottom: 0;
+    padding: 10px;
+    transition: all 0.25s;
+    height: 220px;
+
+}
+
+.card-productos2 .cuerpo-card h4{
+    padding-bottom: 2.5px;
+}
+.card-productos2 .cuerpo-card p{
+    padding: 0 1rem;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.card-productos2 .cuerpo-card a{
+    font-weight: 500;
+    text-decoration: none;
+    color: #3498db;
+}
+
+.contenedor-card2 .card-productos2:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.2);
+}
+
+/*Fin diseño card de productos 2*/
+
+/* Inicio diseño footer*/
+
+footer{
+    background-color: #25344F;
+    padding: 20px 0;
+    text-align: center;
+    text-align: center;
+    color: #fff;
+}
+
+.contenedor-footer{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.contenido-footer{
+    flex: 1;
+    min-width: 200px;
+    padding: 10px;
+}
+
+.contenido-footer h4{
+    padding-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.contenido-footer p{
+    font-weight: 300;
+}
+
+.contenido-footer img{
+    padding-top: 20px;
+}
+
+.contenido-footer a{
+    padding-left: 20px;
+}
+
+.contenido-footer a img:hover{
+    transform: translateY(-7.5px);
+}
+
+/* Fin diseño footer*/
+
+/*Configuramos la pagina de modo responsivo a cualquier dispositivo**/
+@media (max-width: 1024px) {
+    .contenedor-carrusel-imagenes div{
+        max-height: 400px;
+    }
+    h2{
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px){
+
+    .contenedor-carrusel-imagenes div{
+        margin-top: 118px;
+        max-height: 350px;
+    }
+    h2{
+        font-size: 1.5rem;
+    }
+    /*Mostramos el icono hamburguesa*/
+    .navbar-icono{
+        display: block;
+    }
+    /*Ocultar el menu por defecto*/
+    .navbar-menu{
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #2C395E;
+        flex-direction: column;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;    
+    }
+/*Mostrar el menu cuando damos click*/
+    .menu-toggle:checked ~ .navbar-menu{
+        margin-top: 40px;
+        max-height: 400px;
+    }
+    .navbar{
+        position: fixed;
+        top: 0;
+    }
+    /*Ajustar los enlaces del menu de navegacion*/
+    .navbar-menu li{
+        width: 100%;
+        text-align: center;
+    }
+    .navbar-link{
+        display: block;
+        padding: 0.2rem;
+    }
+    .contenedor-footer{
+        flex-direction: column;
+        align-items: center;
+    }
+    .contenido-footer{
+        max-width: 100%;
+
+    }
+
+}
+/*Fin media querie 768px*/
+
+/*Configuracion media querie 480px*/
+    @media (max-width: 480px) {
+        .contenedor-carrusel-imaganes div{
+            max-height: 300px;
+        }
+    
+    }
+
+/*Fin configuracion media querie 480px*/
